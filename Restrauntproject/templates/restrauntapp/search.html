@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static "css/search.css" %}">
+</head>
+<body>
+	<div class="container">
+		<h1>search</h1>
+		<form method="post" action="/search/">
+			{% csrf_token %}
+			<input type="text" name="srh" class="form-control" placeholder="enter price"> 
+			<label>
+				<button type="submit" style="color:blue">search</button>
+			</label>
+		</form>
+		{% if sr %}
+			<table style="color:white" border="10" width="80%"><br><br>
+				<tr>
+					<th>foodname</th>
+					<th>price</th>
+					<th>citi</th>
+					<th>flavor</th>
+				</tr>
+				{% for k in sr %}
+					<tr>
+						<td>{{ k.foodname}}</td>
+						<td>{{ k.price}}</td>
+						<td>{{ k.citi}}</td>
+						<td>{{ k.flavor}}</td>
+					</tr>
+				{% endfor %}	
+			</table>
+		{% endif %}
+	</header>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+body{
+	background-image: url(../image4.jpg);
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+h1{
+	font-size: 50px;
+	left: 50%;
+	top: 20px;
+}
+
+h2{
+	font-size: 50px;
+	left: 50%;
+	top: 40px;
+}

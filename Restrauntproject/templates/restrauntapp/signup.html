@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+	<title>Signup Page</title>
+	<link rel="stylesheet" type="text/css" href="{% static "css/signup.css" %}">
+</head>
+<body>
+	<div class="jumbotron">
+		<div class="container">
+			<h1 style="color:white">Signup to enjoy the facilities of My Restraunt</h1>
+			<form method="POST">
+				{{ form.as_p }}
+				{% csrf_token %}
+				<input type="submit" value="Signup" style="color: blue" >
+			</form>
+		</div>
+	</div> 
+
+</body>
+</html>

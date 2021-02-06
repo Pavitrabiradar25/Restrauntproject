@@ -1,0 +1,22 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Century Gothic;
+}
+
+body{
+	background-image: url(../image4.jpg);
+	background-repeat: no-repeat;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+}
+
+.container{
+	top: 50%;
+	left: 50%;
+	margin-top: 50px;
+	margin-left: 50%;
+
+}
+

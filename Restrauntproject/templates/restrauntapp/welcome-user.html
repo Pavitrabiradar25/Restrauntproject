@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+	<title>Filter page</title>
+	<link rel="stylesheet" type="text/css" href="{% static "css/homepage.css" %}">
+</head>
+<body>
+	<header>	
+	{% if detail %}
+		<h1>Food information</h1>
+			<table style="color:white" border="10" width="50%"><br><br>
+				<tr>
+					<th>foodname</th>
+					<th>price</th>
+					<th>citi</th>
+					<th>flavor</th>
+				</tr>
+				{% for food in detail %}
+					<tr>
+						<td>{{ food.foodname}}</td>
+						<td>{{ food.price}}</td>
+						<td>{{ food.citi}}</td>
+						<td>{{ food.flavor}}</td>
+					</tr>
+				{% endfor %}	
+			</table>
+	{% endif %}
+	</header>
+
+</body>
+</html>

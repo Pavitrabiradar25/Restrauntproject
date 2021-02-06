@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+	<title>Login Page</title>
+	<link rel="stylesheet" type="text/css" href="{% static "css/signup.css" %}">
+</head>
+<body>
+	<h1 style="color:white">Login to view the Details Regarding our Food</h1>
+	<form method="POST">
+		{{ form.as_p }}
+		{% csrf_token %}
+		<button type="submit">Login</button>		
+	</form>
+
+</body>
+</html>
+	
+	
